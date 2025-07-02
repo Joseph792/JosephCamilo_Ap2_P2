@@ -5,7 +5,6 @@ import edu.ucne.josephcamilo_ap2_p2.data.remote.Resource
 import edu.ucne.josephcamilo_ap2_p2.data.remote.dto.RepositoryDto
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import retrofit2.HttpException
 import javax.inject.Inject
 
 class RepositoryRepository @Inject constructor(
@@ -14,7 +13,7 @@ class RepositoryRepository @Inject constructor(
     suspend fun getRepositories(username: String): Flow<Resource<List<RepositoryDto>>> = flow {
         emit(Resource.Loading())
         try {
-            val repositories = remoteDataSource.getRepositories(username)
+            val repositories = remoteDataSource.getRepository(username)
             emit(Resource.Success(repositories))
         } catch (e: Exception) {
             emit(Resource.Error("Error al obtener repositorios: ${e.message}"))
