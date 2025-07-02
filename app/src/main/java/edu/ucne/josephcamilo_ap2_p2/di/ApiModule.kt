@@ -14,13 +14,14 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 @Module
 object ApiModule {
-    const val BASE_URL = "https://api.github.com/"
+    private const val BASE_URL = "https://api.github.com/"
 
     @Provides
     @Singleton
     fun providesMoshi(): Moshi =
         Moshi.Builder()
-            .add(KotlinJsonAdapterFactory()).add(DateAdapter())
+            .add(KotlinJsonAdapterFactory())
+            .add(DateAdapter())
             .build()
 
     @Provides
