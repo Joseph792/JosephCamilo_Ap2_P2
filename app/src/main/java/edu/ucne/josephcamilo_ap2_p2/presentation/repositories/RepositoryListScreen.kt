@@ -67,7 +67,7 @@ fun RepositoryListScreen(
     val context = LocalContext.current
     var lastRetentionCount by remember { mutableStateOf(0) }
 
-    //Para la busquedaMore actions
+    //Para la busqueda
     val query by viewModel.searchQuery.collectAsStateWithLifecycle()
     val searchResults by viewModel.searchResults.collectAsStateWithLifecycle()
 
@@ -195,7 +195,7 @@ fun RepositoryListBodyScreen(
                             .fillMaxSize()
                             .padding(16.dp)
                     ) {
-                        //Para la busquedaMore actions
+                        //Para la busqueda
                         item {
                             SearchBar(
                                 query = query,

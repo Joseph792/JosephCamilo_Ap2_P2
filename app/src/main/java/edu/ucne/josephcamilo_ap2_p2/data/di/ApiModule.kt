@@ -1,4 +1,4 @@
-package edu.ucne.josephcamilo_ap2_p2.di
+package edu.ucne.josephcamilo_ap2_p2.data.di
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory

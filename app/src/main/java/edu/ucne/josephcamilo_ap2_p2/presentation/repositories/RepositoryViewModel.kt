@@ -28,7 +28,7 @@ class RepositoryViewModel @Inject constructor(
     private val _loading = MutableStateFlow(false)
     val loading: StateFlow<Boolean> = _loading
 
-    //Para el metodo de busquedaMore actions
+    //Para el metodo de busqueda
     private val _searchQuery = MutableStateFlow("")
     val searchQuery: StateFlow<String> = _searchQuery.asStateFlow()
 
@@ -48,7 +48,7 @@ class RepositoryViewModel @Inject constructor(
 
     init {
         getRepository("enelramon")
-        //Para la busquedaMore actions
+        //Para la busqueda
         viewModelScope.launch {
             _searchQuery
                 .debounce(600)
