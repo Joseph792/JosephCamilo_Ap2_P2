@@ -1,4 +1,4 @@
-package edu.ucne.josephcamilo_ap2_p2.presentation.repositories
+package edu.ucne.josephcamilo_ap2_p2.presentation.viajes
 
 sealed class UiEvent {
     object NavigateUp : UiEvent()
