@@ -1,4 +1,4 @@
-package edu.ucne.josephcamilo_ap2_p2.data.di
+package edu.ucne.josephcamilo_ap2_p2.di
 
 import com.squareup.moshi.FromJson
 import com.squareup.moshi.ToJson
