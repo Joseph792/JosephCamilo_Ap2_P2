@@ -1,4 +1,4 @@
-package edu.ucne.josephcamilo_ap2_p2.presentation.repositories
+package edu.ucne.josephcamilo_ap2_p2.presentation.viajes
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Box
@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -73,7 +72,7 @@ fun RepositoryListScreen(
 
     LaunchedEffect(Unit) {
         delay(180000)
-        viewModel.onEvent(RepositoryEvent.GetRepositories)
+        viewModel.onEvent(ViajeEvent.GetRepositories)
     }
 
     LaunchedEffect(uiState.repository) {
@@ -91,7 +90,7 @@ fun RepositoryListScreen(
         drawerState = drawerState,
         scope = scope,
         uiState = uiState,
-        reloadRepository = { viewModel.onEvent(RepositoryEvent.GetRepositories) },
+        reloadRepository = { viewModel.onEvent(ViajeEvent.GetRepositories) },
         goToRepository = goToRepository,
         createRepository = createRepository,
         deleteRepository = deleteRepository,
@@ -106,7 +105,7 @@ fun RepositoryListScreen(
 fun RepositoryListBodyScreen(
     drawerState: DrawerState,
     scope: CoroutineScope,
-    uiState: RepositoryUiState,
+    uiState: ViajeUiState,
     reloadRepository: () -> Unit,
     goToRepository: (String) -> Unit,
     createRepository: () -> Unit,
