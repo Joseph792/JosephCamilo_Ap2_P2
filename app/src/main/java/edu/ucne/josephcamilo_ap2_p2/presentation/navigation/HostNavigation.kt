@@ -7,7 +7,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import edu.ucne.josephcamilo_ap2_p2.presentation.repositories.RepositoryListScreen
+import edu.ucne.josephcamilo_ap2_p2.presentation.viajes.RepositoryListScreen
 
 @Composable
 fun HostNavigation(
